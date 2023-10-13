@@ -1,0 +1,21 @@
+apiv2_reports_employeeReports:
+  path: /api/v2/reports/
+  controller: OrangeHRM\Core\Controller\Rest\V2\GenericRestController::handle
+  methods: [ GET, POST, DELETE]
+  defaults:
+    _api: OrangeHRM\Leave\Api\CompensatoryOffAPI
+
+
+##########################
+#        Screens
+##########################
+
+reports_module:
+  path: /reports/viewReportsModule
+  controller: OrangeHRM\Reports\Controller\ReportsModuleController::handle
+  methods: [ GET ]
+
+view_timesheet_report:
+  path: /reports/employeeReport
+  controller: OrangeHRM\Reports\Controller\TimesheetReportController::handle
+  methods: [ GET ]
